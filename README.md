@@ -1,12 +1,49 @@
-# React + Vite
+VERSION CONTROL:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+a) Git Commands Used to Initialize and Connect Project:
 
-Currently, two official plugins are available:
+git init  
+git add .  
+git commit -m "frontend setup"  
+git remote add origin https://github.com/venmadhi/velsymedia.git 
+git branch -M main  
+git push -u origin main
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+b) purpose of the .gitignore file:
 
-## Expanding the ESLint configuration
+The .gitignore file is used to tell Git which files or folders to ignore so they don't get tracked or pushed to the repository.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+files ignored in my setup:
+node_modules/ 
+build/ 
+.env 
+.vscode/ 
+
+FRONTEND DEVELOPMENT:
+
+a) New input fields added & their purpose:
+
+Name – to identify who is sending the query
+Email – to contact the user for a reply
+Subject – a short title of the issue
+Query – detailed message or problem from the user
+
+b) HTML elements used:
+
+<input> – used to get inputs like Name, Email, and Subject
+<textarea> – used to get the detailed Query
+<form> – wraps all fields for form submission
+<button> – to submit the form
+
+c) How CSS improves the form:
+
+--> Adds spacing and alignment for clean layout
+--> Styles inputs and button for better look and feel
+--> Uses colors and fonts to make it readable and user-friendly
+--> Adds hover and focus effects for interaction feedback
+
+d) Possible improvements:
+
+--> It won’t let you send if required fields are empty or email is not correct (validation).
+--> Using labels and focus helps people who use keyboards.
+

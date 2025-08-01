@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import './Issueform.css'; // 👈 make sure to import your CSS
-
+import './Issueform.css';
 export default function CustomerSupportForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');

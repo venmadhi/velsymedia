@@ -1,71 +1,80 @@
 import React, { useState } from 'react';
-import './IssueForm.css';
+import './Issueform.css'; // 👈 make sure to import your CSS
 
 export default function CustomerSupportForm() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    query: '',
-  });
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [query, setQuery] = useState('');
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
+  function handleNameChange(event) {
+    setName(event.target.value);
+  }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  function handleEmailChange(event) {
+    setEmail(event.target.value);
+  }
+
+  function handleSubjectChange(event) {
+    setSubject(event.target.value);
+  }
+
+  function handleQueryChange(event) {
+    setQuery(event.target.value);
+  }
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
     alert('Form submitted successfully!');
-    setFormData({ name: '', email: '', subject: '', query: '' });
-  };
+    setName('');
+    setEmail('');
+    setSubject('');
+    setQuery('');
+  }
 
   return (
     <div className="formBox">
-      <h2 className="title">Submit a Support Request</h2>
-      <form onSubmit={handleSubmit}>
-
+      <h2 className="title">Customer Support Form</h2>
+      <form onSubmit={handleFormSubmit}>
         <p className="name">Name</p>
         <input
           className="inputName"
-          name="name"
           type="text"
-          value={formData.name}
-          onChange={handleChange}
+          value={name}
+          onChange={handleNameChange}
           required
         />
 
         <p className="email">Email</p>
         <input
           className="inputEmail"
-          name="email"
           type="email"
-          value={formData.email}
-          onChange={handleChange}
+          value={email}
+          onChange={handleEmailChange}
           required
         />
 
         <p className="subject">Subject</p>
         <input
           className="inputSubject"
-          name="subject"
           type="text"
-          value={formData.subject}
-          onChange={handleChange}
+          value={subject}
+          onChange={handleSubjectChange}
           required
         />
 
         <p className="query">Description / Query</p>
         <textarea
           className="inputQuery"
-          name="query"
           rows="5"
-          value={formData.query}
-          onChange={handleChange}
+          value={query}
+          onChange={handleQueryChange}
           required
-        />
+        ></textarea>
 
-        <button className="submitBtn" type="submit">Send</button>
+        <button className="submitBtn" type="submit">
+          Submit
+        </button>
       </form>
     </div>
   );

@@ -1,7 +1,7 @@
 .formBox {
   max-width: 450px;
   margin: 2rem auto;
-  padding:30px;
+  padding: 30px;
   background: #e4e3e3;
   border-radius: 10px;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
@@ -31,7 +31,6 @@
 .inputQuery {
   width: 100%;
   padding: 10px;
- 
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
@@ -50,7 +49,7 @@
 .submitBtn {
   width: 100%;
   padding: 12px;
-  background-color: #2563eb;
+  background-color: #4f7fe7;
   color: white;
   font-weight: bold;
   font-size: 1.1rem;
@@ -58,9 +57,8 @@
   border-radius: 8px;
   cursor: pointer;
   margin-top: 20px;
-  transition: background-color 0.3s ease;
 }
 
 .submitBtn:hover {
-  background-color: #1e40af;
+  background-color: #183aa8;
 }
